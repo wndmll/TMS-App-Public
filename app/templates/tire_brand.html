@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}Tire Brand Upload{% endblock %}
+
+{% block content %}
+<div class="container mt-2">
+  <h1>Tire Check Management</h1>
+
+  <div class="step-indicator">
+    <p class="current-step">Step 2: Tire Brand</p>
+  </div>
+
+  <!-- Metadata div -->
+  <div id="upload-meta" 
+       data-upload-url="{{ url_for('upload_tire_brand', session_id=session_id) }}"
+       data-status-url="{{ url_for('upload_status') }}"
+       data-license="{{ license_plate }}"
+       data-brand="{{ car_brand }}">
+  </div>
+
+  <!-- Upload form -->
+  <form id="upload-form" enctype="multipart/form-data" method="post">
+    <label for="file-input" class="file-input-label">Choose File</label>
+    <input type="file" class="button" name="image" id="file-input" accept="image/*" required>
+    <button type="submit" class="button hidden" id="upload-button">Upload Tire Brand Image</button>
+  </form>
+  <div id="file-name">No file selected</div>
+
+  <!-- Info fields -->
+  <div class="info-fields">
+    <p>License: <span id="license-info">{{ license_plate }}</span></p>
+    <p>Car Brand: <span id="brand-info">{{ car_brand }}</span></p>
+    <p>Tire Brand: <span id="tire-brand-info"></span></p>
+</div>
+
+  <!-- Progress bar -->
+  {% include "progress_bar.html" %}
+
+  <!-- Status updates -->
+  {% include "status_updates.html" %}
+
+  <!-- Navigation -->
+  <div class="step-navigation mt-2">
+    <a href="{{ url_for('session_page', session_id=session_id) }}" class="button">Back to License Plate</a>
+  </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/tire-brand.js') }}" type="module"></script>
+{% endblock %}

@@ -1,0 +1,27 @@
+{
+    "log_file": "logs\\project_log_spec.log",
+    "exclusions": [],
+    "excluded_extensions": [
+        "venv",
+        "data",
+        ".git",
+        "tools",
+        "raw.py",
+        "test.json",
+        ".pyc"
+    ],
+    "specific_folders": [
+        "app"
+    ],
+    "specific_files": [
+        "app\\static\\js\\constants.js",        
+        "app\\static\\js\\dom-handler.js",
+        "app\\static\\js\\eventHandlers.js",
+        "app\\static\\js\\eventSourceHandler.js",
+        "app\\static\\js\\fileInputHandler.js",
+        "app\\static\\js\\formSubmissionHandler.js",
+        "app\\static\\js\\license-refactor.js",
+        "app\\static\\js\\licenseInfoHandler.js",	
+        "app\\static\\js\\updateHandlers.js"
+      ]
+}

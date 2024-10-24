@@ -1,0 +1,11 @@
+{
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/__init__.py": false,
+        "**/README.md": false,
+        "**/.hintrc": true,
+        ".pytest_cache": true,
+        "env": false,
+    },
+    "python.analysis.autoImportCompletions": true
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://uwauto.eu/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://uwauto.eu/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://uwauto.eu/favicon-16x16.png">
+    <title>{% block title %}Tire Check Management{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+
+<body>
+
+    <!-- Content specific to each page -->
+    <div class="container">
+        {% block content %} {% endblock %}
+    </div>
+
+    <!-- Common footer -->
+    <footer class="site-footer text-center mt-2">
+        <p><a href="/" target="_self">UwAuto</a></p>
+        <p>Kleingraverstraat 154-B</p>
+        <p>6466 EJ Kerkrade</p>
+        <p><a href="https://www.uwauto.eu" target="_blank">www.uwauto.eu</a></p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+{
+    "log_tree": "D:/www/TMS-App/logs/project_tree.log",
+    "log_file": "logs/project.log",
+    "exclusions": [
+        "venv",
+        "env",
+        "project_tree.log",
+        "project.log",
+        ".git",
+        "create_tree.py",
+        ".pytest_cache",
+        "tools",
+        "file_logger_config_complete.json",
+        "file_logger_config_filtered.json",
+        "file_logger.py",
+        "__pycache__",
+        ".vscode",
+        ".hintrc",
+        "requirements.txt",
+        "tests",
+        "data", 
+        ".vscode"
+    ],
+    "excluded_extensions": [
+        ".log",
+        ".pyc",
+        ".pyo",
+        ".pyd",
+        ".gitignore",
+        ".env",
+        ".md",
+        ".json",
+        ".txt",
+        ".jpg"
+    ]
+}

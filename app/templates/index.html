@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Tire Check Management{% endblock %}
+
+{% block content %}
+    <div class="content text-center mt-2">
+        <h1>Tire Check Management</h1>
+        <form action="{{ url_for('start_session') }}" method="post">
+            <button class="button">Start New Session</button>
+        </form>
+    </div>
+{% endblock %}

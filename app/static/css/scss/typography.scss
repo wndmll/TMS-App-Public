@@ -1,0 +1,53 @@
+// Global typography settings
+
+// typography.scss
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+
+h1 {
+  font-family: 'Yeseva One', cursive;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: normal;
+  color: var(--heading-color);
+  margin-bottom: 20px; /* Add spacing below the header */
+}
+
+h2 {
+  font-family: 'Yeseva One', cursive;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: normal;
+  color: var(--heading-color);
+  margin-bottom: 15px; /* Add spacing below subheaders */
+}
+
+h1, h2 {
+  text-align: center; // Ensures heading is centered horizontally
+}
+
+p {
+  font-size: 1rem;
+  color: var(--primary-color);
+  margin-bottom: 10px; /* Add margin below paragraph */
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.info-fields {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px; /* Add spacing below info fields */
+}
+
+.info-fields p {
+  font-size: 1rem; // Set to 1rem for consistency
+  margin-bottom: 15px; // Set consistent margin between elements
+}
+
+#file-name {
+  margin-top: 15px;
+  font-size: 1rem;
+}

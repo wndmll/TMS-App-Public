@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-2">
+  <h1>Tire Check Management</h1>
+  
+  <!-- Add step indicator -->
+  <div class="step-indicator">
+    <p class="current-step">Step 1: License Plate</p>
+  </div>
+
+  <!-- Div for storing metadata like URLs -->
+  <div id="upload-meta" data-upload-url="{{ url_for('upload_license_plate', session_id=session_id) }}"
+    data-status-url="{{ url_for('upload_status', session_id=session_id) }}">
+  </div>
+
+  <!-- Form for uploading license plate -->
+  {% include "upload_form.html" %}
+
+  <!-- Info fields for displaying license and brand info -->
+  <div class="info-fields">
+    <p>License: <span id="license-info"></span></p>
+    <p>Brand: <span id="brand-info"></span></p>
+  </div>
+
+  <!-- Progress bar component -->
+  {% include "progress_bar.html" %}
+
+  <!-- Status updates component -->
+  {% include "status_updates.html" %}
+
+  <div class="step-navigation mt-2">
+    <a href="{{ url_for('index') }}" class="button">Back to Home</a>
+    <a href="{{ url_for('tire_brand_page', session_id=session_id) }}" 
+       class="button" 
+       id="next-step-button" 
+       style="display: none;">
+      Continue to Tire Brand
+    </a>
+  </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/license-refactor.js') }}" type="module"></script>
+
+<!-- Add some JavaScript to show the next button after successful upload -->
+<script type="module">
+  import { sharedState } from '/static/js/update-handlers/shared-state.js';
+  
+  // Function to show next button when license plate is detected
+  function showNextButton() {
+    const licenseInfo = document.getElementById('license-info');
+    if (licenseInfo && licenseInfo.textContent.trim() !== '') {
+      document.getElementById('next-step-button').style.display = 'inline-block';
+    }
+  }
+
+  // Check periodically if license info exists
+  setInterval(showNextButton, 1000);
+</script>
+{% endblock %}

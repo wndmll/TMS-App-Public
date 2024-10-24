@@ -1,0 +1,19 @@
+// Define global color variables
+:root {
+  --primary-color: #001233;
+  --primary-hover-color: #123456;
+  --text-color: white;
+  --heading-color: #8679AF;
+  --background-white: white;
+  --background-grey: #f8f9fa;
+  --green: green;
+}
+
+footer {
+  background-color: var(--background-grey);
+}
+
+::selection {
+  color: var(--text-color); /* Set the text color when selected */
+  background-color: var(--primary-color); /* Set the background color when selected */
+}
